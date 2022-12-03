@@ -8,7 +8,7 @@ function sum(n) {
     //     result = (1 + n) * n / 2
     // }
 
-    result = 0
+    let result = 0
     if (n < 0) {
         n = -n
         for (let i = 1; i <= n; i++) {
