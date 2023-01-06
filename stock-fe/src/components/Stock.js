@@ -7,6 +7,8 @@ const Stock = () => {
   const [stocks, setStocks] = useState([]);
   const [counter, setCounter] = useState(0);
 
+  const [search,setSearch]=useState("");
+
   useEffect(() => {
     console.log("沒有第二個參數");
   });
@@ -36,6 +38,15 @@ const Stock = () => {
       >
         add {counter}
       </button>
+
+      <div>
+          <input type="text" onChange={(e)=>{setSearch(e.target.value)}}/>
+          <div>
+              目前搜尋:{search}
+          </div>
+      </div>
+
+
 
       {stocks.map((stock) => {
         return (
